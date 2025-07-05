@@ -53,9 +53,29 @@
     @apply border-border;
   }
 
+  html {
+    @apply bg-black;
+    height: 100%;
+    background-color: #000000;
+    background-attachment: fixed;
+  }
+
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-black text-white;
     font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    min-height: 100dvh; /* For better mobile support */
+    height: 100%;
+    background-color: #000000;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  #root {
+    min-height: 100vh;
+    min-height: 100dvh; /* For better mobile support */
+    background-color: #000000;
   }
 
   :root {
@@ -116,6 +136,26 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  /* Ensure endless background coverage */
+  .endless-bg {
+    background-color: #000000;
+    background-image: linear-gradient(180deg, #000000 0%, #000000 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  
+  /* Prevent white space on scroll */
+  .no-scroll-whitespace {
+    background-color: #000000;
+    background-image: linear-gradient(180deg, #000000 0%, #000000 100%);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: 100% 100vh;
   }
   
   /* Improve touch targets for mobile */

@@ -85,7 +85,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-black text-white overflow-x-hidden">
+    <div className="bg-black text-white overflow-x-hidden min-h-screen endless-bg no-scroll-whitespace">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 glass-morphism">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
